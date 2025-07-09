@@ -1,0 +1,114 @@
+/* style.css */
+
+/* General Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f0f2f6;
+}
+
+/* Main Container Padding */
+.stApp {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Custom Chat Bubbles */
+/* User message bubble */
+.stChatMessage.stChatMessage--user {
+    background-color: #e0f2f7; /* Light blue */
+    border-radius: 18px 18px 3px 18px; /* Rounded corners except bottom-left */
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    max-width: 85%;
+    align-self: flex-end; /* Align to the right */
+    margin-left: auto; /* Push to the right */
+    color: #333;
+}
+
+/* Assistant message bubble */
+.stChatMessage.stChatMessage--assistant {
+    background-color: #f7f7f7; /* Light gray */
+    border-radius: 18px 18px 18px 3px; /* Rounded corners except bottom-right */
+    padding: 12px 18px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    max-width: 85%;
+    align-self: flex-start; /* Align to the left */
+    margin-right: auto; /* Push to the left */
+    color: #333;
+}
+
+/* Specific styling for the message content within bubbles */
+.stChatMessage div.stMarkdown {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Chat Input styling */
+.stTextInput > div > div > input {
+    border-radius: 20px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* Sidebar styling */
+.css-1d391kg { /* This targets the sidebar directly, might change with Streamlit updates */
+    background-color: #e8f5e9; /* Light green for sidebar */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Title in sidebar */
+.css-1d391kg h2 {
+    color: #2e7d32; /* Darker green */
+}
+
+/* Subheader in sidebar */
+.css-1d391kg h3 {
+    color: #4caf50; /* Medium green */
+}
+
+/* File Uploader button styling */
+.stFileUploader > div > button {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.stFileUploader > div > button:hover {
+    background-color: #388e3c;
+}
+
+/* Success/Error/Warning Messages */
+.stAlert {
+    border-radius: 8px;
+}
+
+/* Markdown for headers */
+h1 {
+    color: #0d47a1; /* Darker blue for main title */
+}
+
+h2 {
+    color: #1565c0; /* Medium blue for subheaders */
+}
+
+/* Remove default Streamlit padding around the chat messages container to let bubbles breathe */
+div.st-emotion-cache-1fttf0b { /* This might need adjustment based on Streamlit versions */
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+/* Adjust button styles if you add new buttons */
+.stButton > button {
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+}

@@ -12,3 +12,12 @@ sentence-transformers>=2.7.0
 streamlit>=1.30.0
 pypdf2>=1.26.0
 pypdf
+fastapi
+uvicorn
+python-multipart
+chromadb
+protobuf
+arxiv
+torchxrayvision
+
+torchvision

@@ -30,7 +30,7 @@ def load_vectorDatabase():
     """
     if os.path.exists(vectorestore_path):
         embedding = HuggingFaceEmbeddings(model_name ="sentence-transformers/all-MiniLM-L6-v2")
-        return FAISS.load_local(vectorestore_path, embedding)
+        return FAISS.load_local(vectorestore_path, embedding,allow_dangerous_deserialization=True)
     else:
         raise FileNotFoundError(f"Vectorstore not found at {vectorestore_path}")
 
